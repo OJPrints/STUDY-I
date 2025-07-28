@@ -1,0 +1,25 @@
+{
+  "short_name": "STUDY-i",
+  "name": "STUDY-i - Intelligent Learning Management System",
+  "icons": [
+    {
+      "src": "STUDYI.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "STUDYI.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "STUDYI.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#8B4513",
+  "background_color": "#F5F5DC"
+} 

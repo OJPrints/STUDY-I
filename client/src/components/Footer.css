@@ -1,0 +1,262 @@
+/* Footer Styles */
+.footer {
+  background: var(--dark-brown);
+  color: var(--white);
+  padding: 3rem 0 1rem;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Main Section */
+.footer-section.main-section {
+  grid-column: 1;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.footer-logo img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.footer-description {
+  color: var(--gray-300);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-contact {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.footer-contact p {
+  color: var(--gray-300);
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-contact a {
+  color: var(--primary-brown);
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Expandable Sections */
+.expandable-header {
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.2s ease-in-out;
+}
+
+.expandable-header:hover {
+  color: var(--primary-brown);
+}
+
+.expand-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.expandable-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.expandable-content.expanded {
+  max-height: 500px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: var(--gray-300);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  font-size: 0.9rem;
+}
+
+.footer-section ul li a:hover {
+  color: var(--white);
+}
+
+.section-details {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+.section-details p {
+  color: var(--gray-400);
+  font-size: 0.8rem;
+  margin: 0.25rem 0;
+  line-height: 1.4;
+}
+
+/* Partners Section */
+.footer-partners {
+  border-top: 1px solid var(--gray-600);
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-partners h4 {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.partner-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.partner-logo h5 {
+  color: var(--primary-brown);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.partner-details {
+  flex: 1;
+}
+
+.partner-details p {
+  color: var(--gray-300);
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.partner-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.partner-details ul li {
+  color: var(--gray-300);
+  font-size: 0.85rem;
+  margin: 0.25rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.partner-details ul li::before {
+  content: '•';
+  color: var(--primary-brown);
+  position: absolute;
+  left: 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--gray-600);
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: var(--gray-400);
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-section.main-section {
+    grid-column: 1 / -1;
+  }
+  
+  .partner-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .expandable-header {
+    justify-content: center;
+  }
+  
+  .expand-icon {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+  
+  .footer-content {
+    gap: 1rem;
+  }
+  
+  .footer-contact {
+    padding: 0.75rem;
+  }
+  
+  .partner-info {
+    padding: 1rem;
+  }
+} 
